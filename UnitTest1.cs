@@ -26,17 +26,6 @@ namespace XUnitTestProject2
         }
 
         [Fact]
-        public void GetTypeTestEqual()
-        {
-            MultipleBinaryFlag flag1 = new MultipleBinaryFlag(32);
-            MultipleBinaryFlag flag2 = new MultipleBinaryFlag(32, false);
-
-            Assert.True(flag1.GetType().Equals(flag2.GetType()));
-            Assert.Equal("IIG.BinaryFlag.MultipleBinaryFlag", flag1.GetType().ToString());
-            Assert.Equal("IIG.BinaryFlag.MultipleBinaryFlag", flag2.GetType().ToString());
-        }
-
-        [Fact]
         public void GetFlagTestNotEqual()
         {
             MultipleBinaryFlag flag1 = new MultipleBinaryFlag(32);
@@ -113,7 +102,18 @@ namespace XUnitTestProject2
             Assert.True(flag1.GetFlag());
             Assert.False(flag2.GetFlag());
         }
-        
+
+        [Fact]
+        public void GetTypeTestEqual()
+        {
+            MultipleBinaryFlag flag1 = new MultipleBinaryFlag(32);
+            MultipleBinaryFlag flag2 = new MultipleBinaryFlag(32, false);
+
+            Assert.True(flag1.GetType().Equals(flag2.GetType()));
+            Assert.Equal("IIG.BinaryFlag.MultipleBinaryFlag", flag1.GetType().ToString());
+            Assert.Equal("IIG.BinaryFlag.MultipleBinaryFlag", flag2.GetType().ToString());
+        }
+
         [Fact]
         public void ToStringTest()
         {
